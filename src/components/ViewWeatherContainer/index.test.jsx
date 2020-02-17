@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import GetWeatherContainer from './index';
+import ViewWeatherContainer from './index';
 
 
-xdescribe('the GetWeatherContainer component', () => {
+xdescribe('the ViewWeatherContainer component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<GetWeatherContainer />);
+    const { asFragment } = render(<ViewWeatherContainer />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
