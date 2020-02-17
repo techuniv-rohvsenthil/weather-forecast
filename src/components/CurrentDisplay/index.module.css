@@ -1,0 +1,9 @@
+.CurrentDisplay{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    flex: 2;
+    background-image: linear-gradient( white, bisque);
+    margin-left: 10rem;
+    margin-right: 10rem;
+}

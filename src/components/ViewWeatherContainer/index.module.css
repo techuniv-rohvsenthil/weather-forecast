@@ -1,0 +1,14 @@
+.ViewWeatherContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.Coordinates{
+    display: flex;
+    justify-content: center;
+    flex: 3;
+    background-image: linear-gradient(bisque, white);
+    padding: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
