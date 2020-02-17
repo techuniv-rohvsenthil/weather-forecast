@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import propTypes from 'prop-types';
 import * as styles from './index.module.css';
 
 const Carousel = (props) => {
@@ -26,6 +27,10 @@ const Carousel = (props) => {
       </Slider>
     </div>
   );
+};
+
+Carousel.propTypes = {
+  weatherRecord: propTypes.arrayOf(propTypes.object).isRequired,
 };
 
 export default Carousel;

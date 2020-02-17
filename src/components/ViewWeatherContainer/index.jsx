@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import propTypes from 'prop-types';
 import * as styles from './index.module.css';
 import useWeatherDetails from '../../hooks/useWeatherDetails';
 import CurrentDisplay from '../CurrentDisplay';
 import Carousel from '../Carousel';
-import Button from '../Button';
-
 
 const ViewWeatherContainer = ({ latitude, longitude }) => {
   const [temp, pressure, humidity, callComplete] = useWeatherDetails(latitude, longitude);
@@ -24,4 +23,10 @@ const ViewWeatherContainer = ({ latitude, longitude }) => {
   }
   return (<div>Loading ...</div>);
 };
+
+ViewWeatherContainer.propTypes = {
+  longitude: propTypes.string.isRequired,
+  latitude: propTypes.string.isRequired,
+};
+
 export default ViewWeatherContainer;

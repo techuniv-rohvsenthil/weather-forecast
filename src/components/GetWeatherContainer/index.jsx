@@ -1,6 +1,7 @@
 import React from 'react';
 import { geolocated } from 'react-geolocated';
 import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
 import * as styles from './index.module.css';
 import Button from '../Button';
 
@@ -30,6 +31,14 @@ const GetWeatherContainer = ({
       </Link>
     </div>
   );
+};
+
+GetWeatherContainer.propTypes = {
+  isGeolocationAvailable: propTypes.bool.isRequired,
+  isGeolocationEnabled: propTypes.bool.isRequired,
+  setLongitude: propTypes.func.isRequired,
+  setLatitude: propTypes.func.isRequired,
+  coords: propTypes.objectOf(propTypes.number).isRequired,
 };
 
 export default geolocated({
