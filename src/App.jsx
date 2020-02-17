@@ -17,7 +17,7 @@ const App = () => {
             <GetWeatherContainer setLatitude={setLatitude} setLongitude={setLongitude} />
           </Route>
           <Route exact path="/view">
-            <ViewWeatherContainer latitude={latitude} longitude={longitude} />
+            <ViewWeatherContainer latitude={localStorage.getItem('latitude')} longitude={localStorage.getItem('longitude')} />
           </Route>
         </Switch>
       </Router>

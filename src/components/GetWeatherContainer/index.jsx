@@ -19,6 +19,8 @@ const GetWeatherContainer = ({
   if (enable) {
     setLatitude(coords.latitude);
     setLongitude(coords.longitude);
+    localStorage.setItem('latitude', coords.latitude);
+    localStorage.setItem('longitude', coords.longitude);
   }
 
   return (

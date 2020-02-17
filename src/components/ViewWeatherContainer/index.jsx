@@ -7,17 +7,21 @@ import Button from '../Button';
 
 
 const ViewWeatherContainer = ({ latitude, longitude }) => {
-  const [temp, pressure, humidity] = useWeatherDetails(latitude, longitude);
-  const [weatherRecord, setWeatherRecord] = useState([{ temp: 50, pressure: 50, humidity: 50 }]);
-  return (
-    <div className={styles.ViewWeatherContainer}>
-      <div className={styles.Coordinates}>
-        {`Showing weather forecast for Lat:${latitude}, Long:${longitude}`}
+  const [temp, pressure, humidity, callComplete] = useWeatherDetails(latitude, longitude);
+  if (callComplete) {
+    const weatherDataList = JSON.parse(localStorage.getItem('weatherData') || '[]');
+    weatherDataList.push({ temp, pressure, humidity });
+    localStorage.setItem('weatherData', JSON.stringify(weatherDataList));
+    return (
+      <div className={styles.ViewWeatherContainer}>
+        <div className={styles.Coordinates}>
+          {`Showing weather forecast for Lat:${latitude}, Long:${longitude}`}
+        </div>
+        <CurrentDisplay temp={temp} pressure={pressure} humidity={humidity} />
+        <Carousel weatherRecord={weatherDataList} />
       </div>
-      <CurrentDisplay temp={temp} pressure={pressure} humidity={humidity} />
-      <Carousel weatherRecord={weatherRecord} />
-      <Button testID="new-data-btn" text="Get New Data" />
-    </div>
-  );
+    );
+  }
+  return (<div>Loading ...</div>);
 };
 export default ViewWeatherContainer;
