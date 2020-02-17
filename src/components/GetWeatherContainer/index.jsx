@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import * as styles from './index.module.css';
 import Button from '../Button';
 
-
 const GetWeatherContainer = ({
   isGeolocationAvailable, isGeolocationEnabled, coords, setLatitude, setLongitude,
 }) => {

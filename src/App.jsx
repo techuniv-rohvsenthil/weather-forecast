@@ -6,10 +6,9 @@ import {
 import GetWeatherContainer from './components/GetWeatherContainer';
 import ViewWeatherContainer from './components/ViewWeatherContainer';
 
-function App() {
+const App = () => {
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
-
   return (
     <div className="App">
       <Router>
@@ -24,6 +23,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
