@@ -5,7 +5,7 @@ module.exports = {
     jest: true,
   },
 
-  parser: babel,
+  parser: 'babel-eslint',
 
   extends: [
     'plugin:react/recommended',

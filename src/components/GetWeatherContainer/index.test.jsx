@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Button from './index';
+
+import GetWeatherContainer from './index';
 
 
-describe('the button component', () => {
+describe('the GetWeatherContainer component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<Button testID="test-btn" text="Test text" />);
+    const { asFragment } = render(<GetWeatherContainer />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

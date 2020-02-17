@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router, Switch, Route,
 } from 'react-router-dom';
-import Button from './components/Button';
+import GetWeatherContainer from './components/GetWeatherContainer';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Button testID="test-btn" text="Get Weather" />
+            <GetWeatherContainer />
           </Route>
         </Switch>
       </Router>

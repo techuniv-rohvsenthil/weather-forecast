@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the GetWeatherContainer component should render correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <button
+        data-testid="test-btn"
+        type="button"
+      >
+        Get Weather
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
