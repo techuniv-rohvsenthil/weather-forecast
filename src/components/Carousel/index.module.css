@@ -1,0 +1,12 @@
+.CarouselNote{
+    background-color: rgb(246, 193, 124);
+    padding: 2rem;
+}
+
+.Carousel{
+    border: 1px solid;
+}
+
+.carouselDisplay{
+    margin: 3rem;
+}
