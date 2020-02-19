@@ -6,11 +6,9 @@ import * as styles from './index.module.css';
 const Button = (props) => {
   const { text, testID } = props;
   return (
-    <div>
-      <button className={styles.Button} data-testid={testID} type="button">
-        {text}
-      </button>
-    </div>
+    <button className={styles.Button} data-testid={testID} type="button">
+      {text}
+    </button>
   );
 };
 
